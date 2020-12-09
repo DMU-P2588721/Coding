@@ -1,0 +1,153 @@
+/*format the text for the website*/
+body {
+  font-family: helvetica, arial, sans-serif;
+  line-height: 1.4em;
+  margin: 0;
+}
+
+/*curved corners for images*/
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+header,
+section,
+aside,
+footer,
+h2 {
+  padding: 8px;
+}
+
+/*Header styling*/
+header {
+  background-color: #b39e7f;
+  color: black;
+  text-align: center;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+/*THE NAVIGATION BAR*/
+/*sets the basic styling for the navigation bar*/
+nav {
+  display: flex;
+  background-color: #948369;
+  overflow: hidden;
+  border-style: double;
+  border-color: black;
+}
+
+/*formats for the links*/
+nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  flex-grow: 1;
+  font-size: 17px;
+}
+
+/*Changes the colour of the link that the mouse is hovering over*/
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/*Changes the colour of the current page's link*/
+nav a.active {
+  background-color: #eb6eac;
+  color: white;
+}
+
+
+/*formats the title image*/
+.title{
+  height: auto;
+  width: 50%;
+}
+
+/*margins and padding*/
+.section{
+  margin: 20px;
+}
+
+.vid-section{
+  margin: 10px;
+  text-align: center;
+}
+
+.links{
+  text-align: center;
+}
+
+
+/*FORMAT FOR SIDE BY SIDE*/
+/*Side by side on Main page*/
+.boxes{
+  display: flex;
+  margin: 20px;
+}
+
+.boxside {
+  flex: 1;
+}
+
+
+@media only screen and (max-width:672px) {
+  .boxes{
+    display: block;
+  }
+  .boxside {
+    float: left;
+    width:100%;
+    height: auto;
+  }
+}
+
+/*Side by side on Cast page*/
+/*Puts a border around each section*/
+.row {
+  border: 1px outset;
+}
+
+/*Allows the text to be side by side*/
+.column {
+  float: left;
+  padding: 1%;
+}
+
+.left {
+  width: 15%;
+}
+
+.right {
+  width: 80%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Max width for the video player*/
+#player {
+  max-width:100%;
+}
+
+
+/*Formats the footer*/
+footer {
+  background-color: #948369;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+}
+
+footer a {
+  color: #aff1f3;
+  text-decoration: none;
+}
