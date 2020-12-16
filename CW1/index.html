@@ -8,7 +8,10 @@
   </head>
 
   <body>
-    <!-- The header for the webpage is the logo for the film-->
+    <!--The top of the page for the back to top link-->
+    <a name="top"></a>
+
+    <!-- The header for the webpage is the logo for the film. The alt is so the user can have a description of the image if it does not load-->
     <header>
       <img class="title" src="Image/film-logo.png" alt="Girls Trip Film Logo">
     </header>
@@ -21,7 +24,7 @@
 
     <!-- The synopsis of the film-->
     <div class="section">
-      <h1 style="text-align: center">Synopsis</h1>
+      <h1>Synopsis</h1>
       <p>When four lifelong friends travel to New Orleans for the annual Essence Festival,
         sisterhoods are rekindled, wild sides are rediscovered, and there's enough dancing,
         drinking, brawling and romancing to make the Big Easy blush.</p>
@@ -32,6 +35,7 @@
       <div class = "boxside">
         <div class="vid-section">
           <h2>Film Trailer</h2>
+          <!-- The video is the width of the section with the height automatically scaling in relation to the width -->
           <video margin: 0 auto; width="100%" height="auto" controls>
             <source src="Video/Film-Trailer.mp4" type="video/mp4">
             <source src="Video/Film-Trailer.ogg" type="video/webm">
@@ -42,6 +46,7 @@
 
       <div class = "boxside">
         <div class = "section">
+          <!-- The <strong> tag is used to make each heading bold-->
           <h2>Information</h2>
           <p><strong>Initial release:</strong> 21 July 2017 (USA)</p>
           <p><strong>Director:</strong> Malcolm D. Lee</p>
@@ -55,11 +60,14 @@
     <!-- Links at the bottom for places to watch the film -->
     <div class="section links">
       <h1>Places where you can watch</h1>
-      <a href="http://www.youtube.com/watch?v=2tlDsG7jRaQ"> <img src="Image/youtube.png" style="width:100px; height:100px"> </a>
-      <a href="https://www.amazon.co.uk/gp/video/detail/amzn1.dv.gti.beaea9ab-493a-4d21-7623-e5b58a77c329?autoplay=1&ref_=atv_cf_strg_wb"> <img src="Image/prime-video.png" style="width:100px; height:100px"> </a>
+      <a href="http://www.youtube.com/watch?v=2tlDsG7jRaQ"> <img src="Image/youtube.png" alt="Youtube Logo" style="width:100px; height:100px"> </a>
+      <a href="https://www.amazon.co.uk/gp/video/detail/amzn1.dv.gti.beaea9ab-493a-4d21-7623-e5b58a77c329?autoplay=1&ref_=atv_cf_strg_wb"> <img src="Image/prime-video.png" alt= "Prime Video Logo" style="width:100px; height:100px"> </a>
     </div>
 
-    <!-- Footer for the film-->
+    <!-- Back to top button, sits in the bottom left of the page and is an arrow that you click to go to the top of the page -->
+    <a href="#top" class="button"> <img src="Image/arrow.png" alt="Top"><a>
+
+    <!-- Footer for the website-->
     <footer>
       <p>TECH1015 Coursework 1    |   Jarick Boyce - P2588721  | Information from Wikipedia</p>
     </footer>
