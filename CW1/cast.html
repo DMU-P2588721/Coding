@@ -8,6 +8,9 @@
   </head>
 
   <body>
+    <!--The top of the page for the back to top link-->
+    <a name="top"></a>
+
     <header>
       <img class="title" src="Image/film-logo.png">
     </header>
@@ -18,9 +21,19 @@
       <a class="active" href="cast.html">Cast</a>
     </nav>
 
+    <!-- An extra navagation bar to jump to each cast member on the page -->
+    <nav class="nav2">
+      <a href="#regina">Regina Hall</a>
+      <a href="#tiffany">Tiffany Haddish</a>
+      <a href="#jada">Jada Pinkett Smith</a>
+      <a href="#latifah">Queen Latifah</a>
+    </nav>
+
     <!-- The side by side views for the cast sections, in a different way to the home page.
       The code is identical for each cast section with the only difference being the image / information-->
     <div class="row">
+      <!-- The <a name=""> is used for the buttons in the second navagation bar to direct the links -->
+      <a name="jada"></a>
       <h2>Jada Pinkett Smith</h2>
       <!-- The cast member's image on the left with the alt text if the image does not work-->
       <div class="column left">
@@ -36,13 +49,15 @@
       <!-- The audio interview either goes below the cast information or underneath the columns depending on the screen size-->
       <h3>Audio interview</h3>
       <audio id="player" controls >
+        <!-- The audio has 2 sources in case one does not work with the text at the bottom if neither work-->
         <source src="Audio/jada-interview.wav" type="audio/wav">
         <source src="Audio/jada-interview.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
+        Your browser does not support the audio element.
     </div>
 
 
     <div class="row">
+      <a name="latifah"></a>
       <h2>Queen Latifah</h2>
       <div class="column left">
         <img src="Image/Queen-Latifah.jpg" alt="Image of Queen Latifah">
@@ -57,11 +72,12 @@
       <audio id="player" controls >
         <source src="Audio/latifah-interview.wav" type="audio/wav">
         <source src="Audio/larifah-interview.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
+        Your browser does not support the audio element.
     </div>
 
 
     <div class="row">
+      <a name="regina"></a>
       <h2>Regina Hall</h2>
       <div class="column left">
         <img src="Image/regina.jpeg" alt="Image of Regina Hall">
@@ -77,11 +93,12 @@
       <audio id="player" controls >
         <source src="Audio/regina-interview.wav" type="audio/wav">
         <source src="Audio/regina-interview.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
+        Your browser does not support the audio element.
     </div>
 
 
     <div class="row">
+      <a name="tiffany"></a>
       <h2>Tiffany Haddish</h2>
       <div class="column left">
         <img src="Image/tiffany.jpg" alt="Image of Tiffiny Haddish">
@@ -95,9 +112,13 @@
       <audio id="player" controls >
         <source src="Audio/tiffany-interview.wav" type="audio/wav">
         <source src="Audio/tiffany-interview.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
+        Your browser does not support the audio element.
     </div>
 
+    <!-- Back to top button, sits in the bottom left of the page and is an arrow that you click to go to the top of the page -->
+    <a href="#top" class="button"> <img src="Image/arrow.png" alt="Back to Top"><a>
+
+    <!-- Footer for the website-->
     <footer>
       <p>TECH1015 Coursework 1    |   Jarick Boyce - P2588721 | Information from Wikipedia</p>
     </footer>
