@@ -62,6 +62,17 @@ nav a.active {
   color: white;
 }
 
+/*Floating back to top button, the button is fixed in the bottom left corner of the screen*/
+.button{
+  position:fixed;
+	width:40px;
+	height:40px;
+	bottom:5%;
+	right:3%;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
 
 /*formats the title image*/
 .title{
@@ -69,7 +80,7 @@ nav a.active {
   width: 50%;
 }
 
-/*margins and padding*/
+/*margins and padding for the div sections*/
 .section{
   margin: 20px;
 }
