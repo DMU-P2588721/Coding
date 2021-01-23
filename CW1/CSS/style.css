@@ -3,86 +3,153 @@ body {
   font-family: helvetica, arial, sans-serif;
   line-height: 1.4em;
   margin: 0;
+  background-color: black;
+  color: white;
 }
+
+/*Custom Scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #F3A7BA;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(243, 167, 186, 0.8);
+}
+
+
 
 /*curved corners for images*/
 img {
+  text-align: center;
   width: 100%;
   border-radius: 5px;
 }
-
+/*Basic Padding */
 header,
 section,
 aside,
-footer,
-h2 {
-  padding: 8px;
+footer {
+  padding: 5px;
 }
 
 /*Header styling*/
 header {
-  background-color: #b39e7f;
+  background-color: rgba(0, 0, 0, 0.0);
   color: black;
   text-align: center;
 }
 
 h1, h2 {
   text-align: center;
+  color: #F3A7BA;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /*THE NAVIGATION BAR*/
-/*sets the basic styling for the navigation bar*/
-nav {
-  display: flex;
-  background-color: #948369;
-  overflow: hidden;
-  border-style: double;
-  border-color: black;
+
+.navbar{
+  background-color: rgba(0, 0, 0, 0.0);
+  overflow:hidden;
+
 }
 
-.nav2{
-  display: flex;
-  background-image:url(../Image/cast2.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  overflow: hidden;
-  padding: auto;
-  border-style: double;
-  border-color: black;
-}
-/*formats for the links*/
-nav a {
+.navbar a {
   float: left;
-  color: #f2f2f2;
+  display: block;
+  color: #F3A7BA;
+  text-transform: uppercase;
   text-align: center;
+  text-decoration: none;
+  font-weight: bold;
   padding: 15px;
-  flex-grow: 1;
-  font-size: 17px;
+  font-size: 15px;
 }
 
-/*Changes the colour of the link that the mouse is hovering over*/
-nav a:hover {
-  background-color: #ddd;
-  color: black;
+.navbar .icon {
+  display: none;
 }
 
-/*Changes the colour of the current page's link*/
-nav a.active {
-  background-color: #eb6eac;
-  color: white;
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
 
-/*Floating back to top button, the button is fixed in the bottom left corner of the screen*/
-.button{
-  position:fixed;
-	width:40px;
-	height:40px;
-	bottom:5%;
-	right:3%;
-	border-radius:50px;
-	text-align:center;
-	box-shadow: 2px 2px 3px #999;
+.dropdown .dropbtn {
+  font-size: 14px 16px;
+  border: none;
+  color: #F3A7BA;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  z-index: 10;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #F3A7BA;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {float: none;}
+  .navbar.responsive .dropdown-content {position: relative;}
+  .navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+ }
 }
 
 /*formats the title image*/
@@ -101,75 +168,288 @@ nav a.active {
   text-align: center;
 }
 
-.links{
+/*Home Page Video*/
+.full-video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.vid-header {
+  position: relative;
   text-align: center;
-}
-
-
-/*FORMAT FOR SIDE BY SIDE*/
-/*Side by side on Main page*/
-.boxes{
   display: flex;
-  margin: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
-.boxside {
-  flex: 1;
+.vid-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
-@media only screen and (max-width:672px) {
-  .boxes{
-    display: block;
+
+/*Layout for Members Page*/
+
+/* Style the members menu */
+.tab-img{
+  background-image: url(../Image/blackpink-banner.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.tab {
+  overflow: hidden;
+  display: flex;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: rgba(0 , 0 , 0 , 0.5);
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  transition: 0.3s;
+  color: #F3A7BA;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+
+}
+
+/* Style the Member Tabs content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+}
+
+
+.item1 { grid-area: header; }
+.item2 { grid-area: image; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.members-grid {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main main image'
+    'main main main main main right'
+    'footer footer footer footer footer right';
+  grid-gap: 7px;
+  background-color: black;
+  padding: 5px;
+  margin: 2%;
+}
+
+.members-grid > div {
+  background-color: rgba(255, 255, 255, 0.0);
+  text-align: center;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.member-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20vw;
+}
+
+/*Layout for Music Page */
+.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 15px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  font-size: 20px;
+}
+
+.grid-container > div > button > img , .tabcontent > div > div > img{
+  text-align: center;
+  border: 2px solid black;
+  box-shadow: 0 0 5px #F3A7BA;
+}
+
+/*Collapsable Buttons Music Page*/
+.button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.collapsible {
+  background-color: black;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.active, .collapsible:hover {
+
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: black;
+}
+
+
+/* Social Media Page*/
+
+.tiles {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px){
+  .tiles{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    padding: 10px;
   }
-  .boxside {
-    float: left;
-    width:100%;
-    height: auto;
+  .tiles article > a{
+    font-size: 3vw !important;
   }
 }
 
-/*Side by side on Cast page*/
-/*Puts a border around each section*/
-.row {
-  border: 1px outset;
+.tiles article {
+	transition: transform 0.5s ease, opacity 0.5s ease;
+  flex-grow: 1;
+	position: relative;
+  text-align: center;
+	margin: 20px;
 }
 
-/*Allows the text to be side by side*/
-.column {
-  float: left;
-  padding: 1%;
+.tiles article > .image {
+	transition: transform 0.5s ease;
+	position: relative;
+	display: block;
+	width: 100%;
+	overflow: hidden;
 }
 
-.left {
-  width: 15%;
+.tiles article > .image:before {
+	transition: background-color 0.5s ease, opacity 0.5s ease;
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+  background-color: black;
+	opacity: .5;
+	z-index: 1;
 }
 
-.right {
-  width: 80%;
+.tiles article > a {
+	align-items: center;
+	transition: background-color 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F3A7BA;
+  font-size: 17px;
+	text-decoration: none;
+	z-index: 3;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+body:not(.is-touch) .tiles article:hover > .image {
+	transform: scale(1.1);
 }
 
-/*Max width for the video player*/
-#player {
-  max-width:100%;
+body:not(.is-touch) .tiles article:hover > .image:before {
+	background-color: none !important;
+	opacity: 0.2;
 }
 
 
 /*Formats the footer*/
 footer {
-  background-color: #948369;
-  color: white;
-  font-size: 13px;
+  background-color: black;
+  padding: 20px;
+  font-size: 15px;
+  color: #737373;
   text-align: center;
+  overflow: hidden;
 }
 
-footer a {
-  color: #aff1f3;
+/*Social Media Links*/
+.social-icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.social-icons li.title {
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.social-icons a {
+  display: inline-block;
+  background-color: #33353d;
+  color: #F3A7BA;
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-decoration: none;
+  text-align: center;
+  margin: 2px;
+  border-radius: 100%;
+  transition: all 0.2s linear;
+}
+
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover {
+  color: white;
+  background-color: #F3A7BA;
+}
+
+.fa{
+  background: #F3A7BA
+  color: white;
 }
